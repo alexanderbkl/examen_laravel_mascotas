@@ -142,18 +142,6 @@
                                 </div>
                             </div>
 
-
-                            <div class="form-group{{ $errors->has('profile_picture') ? ' has-error' : '' }}">
-                                <label for="profile_picture" class="col-md-4 control-label">Profile Picture</label>
-                                <input id="profile_picture" type="file" class="form-control" name="profile_picture">
-
-                                @if ($errors->has('profile_picture'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('profile_picture') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
                             <div class="row mb-3">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
