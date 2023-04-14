@@ -14,12 +14,24 @@
                             </div>
                         @endif
                         <p>Binevenido/a mascota {{ Auth::user()->name }}</p>
-                        <p>Subir foto de perfil</p>
-                        <form action="{{ route('home') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <input type="file" name="image">
-                            <input type="submit" value="Upload">
-                        </form>
+                        @if (Auth::user()->picture_path != null)
+                            <img src="{{ Auth::user()->picture_path }}" alt="Foto de perfil" width="100" height="100">
+                            <!--erase picture button-->
+                            <div class="row mb-3">
+                                <form action="{{ route('home') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="erase" value="true">
+                                    <input type="submit" value="Borrar foto">
+                                </form>
+                            </div>
+                        @else
+                            <p>Subir foto de perfil</p>
+                            <form action="{{ route('home') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <input type="file" name="image">
+                                <input type="submit" value="Upload">
+                            </form>
+                        @endif
 
                         <!--iterate through users to show them in a table-->
 

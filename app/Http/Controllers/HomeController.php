@@ -39,6 +39,9 @@ class HomeController extends Controller
             $request->image->storeAs('images', $filename, 'public');
             Auth()->user()->update(['picture_path'=>'/examen/storage/app/public/images/'.$filename]);
 
+        } else {
+            //delete image
+            Auth()->user()->update(['picture_path'=>null]);
         }
         return redirect()->back();
     }
