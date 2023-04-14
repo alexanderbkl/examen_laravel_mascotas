@@ -21,7 +21,7 @@
                                 <form action="{{ route('home') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="erase" value="true">
-                                    <input type="submit" value="Borrar foto">
+                                    <input type="submit" value="Borrar foto de perfil">
                                 </form>
                             </div>
                         @else

@@ -4912,3 +4912,70 @@ operable program or batch file.
 #52 C:\\laragon\\www\\examen\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #53 {main}
 "} 
+[2023-04-14 09:48:40] local.ERROR: The command "mysql  --user="${:LARAVEL_LOAD_USER}" --password="${:LARAVEL_LOAD_PASSWORD}" --host="${:LARAVEL_LOAD_HOST}" --port="${:LARAVEL_LOAD_PORT}" --database="${:LARAVEL_LOAD_DATABASE}" < "${:LARAVEL_LOAD_PATH}"" failed.
+
+Exit Code: 1(General error)
+
+Working directory: C:\laragon\www\examen
+
+Output:
+================
+
+
+Error Output:
+================
+'mysql' is not recognized as an internal or external command,
+operable program or batch file.
+ {"exception":"[object] (Symfony\\Component\\Process\\Exception\\ProcessFailedException(code: 0): The command \"mysql  --user=\"${:LARAVEL_LOAD_USER}\" --password=\"${:LARAVEL_LOAD_PASSWORD}\" --host=\"${:LARAVEL_LOAD_HOST}\" --port=\"${:LARAVEL_LOAD_PORT}\" --database=\"${:LARAVEL_LOAD_DATABASE}\" < \"${:LARAVEL_LOAD_PATH}\"\" failed.
+
+Exit Code: 1(General error)
+
+Working directory: C:\\laragon\\www\\examen
+
+Output:
+================
+
+
+Error Output:
+================
+'mysql' is not recognized as an internal or external command,
+
+operable program or batch file.
+
+ at C:\\laragon\\www\\examen\\vendor\\symfony\\process\\Process.php:267)
+[stacktrace]
+#0 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlSchemaState.php(76): Symfony\\Component\\Process\\Process->mustRun(NULL, Array)
+#1 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(250): Illuminate\\Database\\Schema\\MySqlSchemaState->load('C:\\\\laragon\\\\www\\\\...')
+#2 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#3 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Factory.php(58): Illuminate\\Console\\View\\Components\\Task->render('C:\\\\laragon\\\\www\\\\...', Object(Closure))
+#4 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(242): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
+#5 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(127): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->loadSchemaState()
+#6 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(632): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#9 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(194): Illuminate\\Container\\Container->call(Array)
+#15 C:\\laragon\\www\\examen\\vendor\\symfony\\console\\Command\\Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#16 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(163): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('migrate', Array, Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call('migrate', Array)
+#20 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#21 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#22 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#23 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#24 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#25 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(194): Illuminate\\Container\\Container->call(Array)
+#26 C:\\laragon\\www\\examen\\vendor\\symfony\\console\\Command\\Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(163): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#28 C:\\laragon\\www\\examen\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\laragon\\www\\examen\\vendor\\symfony\\console\\Application.php(314): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\laragon\\www\\examen\\vendor\\symfony\\console\\Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\laragon\\www\\examen\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\laragon\\www\\examen\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+"} 
